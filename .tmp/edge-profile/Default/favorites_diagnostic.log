@@ -1,0 +1,100 @@
+2026-08-25 13:52:12.458: [INFO] CurrentProfilePath: C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default
+2026-08-25 13:52:12.458: [INFO] Profiles total count: 1
+2026-08-25 13:52:12.458: [INFO] Profile: name=Profile 1 path=C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default lastActive=null
+2026-08-25 13:52:12.458: [INFO] LastUsedProfileDir: C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default
+2026-08-25 13:52:12.458: [INFO] VisibilityChanged: 0
+2026-08-25 13:52:12.474: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.474: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.475: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.476: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.476: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.477: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.478: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.479: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.480: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.480: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:12.499: [INFO] OnDoneLoading sync enabled: 0
+2026-08-25 13:52:12.499: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-25 13:52:12.499: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-25 13:52:12.500: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-25 13:52:12.502: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:35.702: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-08-25 13:52:35.743: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-08-25 13:52:35.752: [INFO] Primary account changed.
+2026-08-25 13:52:35.752: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-08-25 13:52:35.761: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-08-25 13:52:35.775: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-08-25 13:52:41.365: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.366: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.366: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.366: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.366: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.366: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.367: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.367: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.367: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.368: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.369: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.369: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.369: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.369: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.369: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.370: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.370: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.370: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.370: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.370: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.371: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.372: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.373: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.374: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.375: [INFO] BookmarkNodeAdded, ABU: 0
+2026-08-25 13:52:41.381: [INFO] BookmarkBarPrefChanged showBar=0 showBarNTP=0
+2026-08-25 13:52:41.482: [INFO] VisibilityChanged: 1
+2026-08-25 13:52:44.237: [INFO] Sync initialization duration: 8318ms
+2026-08-25 13:55:58.738: [INFO] CurrentProfilePath: C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default
+2026-08-25 13:55:58.738: [INFO] Profiles total count: 1
+2026-08-25 13:55:58.738: [INFO] Profile: name=Personal path=C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default lastActive=2026-08-25T13:55:58.731Z
+2026-08-25 13:55:58.738: [INFO] LastUsedProfileDir: C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default
+2026-08-25 13:55:58.738: [INFO] MostRecentlyActiveProfile: name=Personal path=C:\Users\Lenovo\mijotest1\.tmp\edge-profile\Default lastActive=2026-08-25T13:55:58.731Z
+2026-08-25 13:55:58.738: [INFO] OnDoneLoading sync enabled: 1
+2026-08-25 13:55:58.738: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-25 13:55:58.738: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-25 13:55:58.738: [INFO] BookmarksSnapshot Startup total=61 bar=17 other=0 mobile=44 showBar=1 showBarNTP=0
+2026-08-25 13:56:01.524: [INFO] Sync initialization duration: 2695ms
