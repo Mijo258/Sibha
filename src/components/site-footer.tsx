@@ -13,7 +13,7 @@ export function SiteFooter() {
           “My Lord, increase me in knowledge.” — Surah Ta-Ha 20:114
         </p>
         <p className="mt-2 text-xs text-muted-foreground">
-          Qur&apos;an text and recitation from{" "}
+          Qur&apos;an text from{" "}
           <a
             href="https://alquran.cloud"
             target="_blank"
@@ -21,6 +21,24 @@ export function SiteFooter() {
             className="underline underline-offset-2 transition-colors hover:text-foreground"
           >
             AlQuran.cloud
+          </a>{" "}
+          · Recitation from{" "}
+          <a
+            href="https://mp3quran.net"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2 transition-colors hover:text-foreground"
+          >
+            MP3Quran
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://quranicaudio.com"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-2 transition-colors hover:text-foreground"
+          >
+            QuranicAudio
           </a>
         </p>
       </div>

@@ -1,17 +1,51 @@
 /**
- * AlQuran.cloud API client.
+ * AlQuran.cloud text client and continuous Surah reciter sources.
  *
  * Endpoints used (all free, no key):
  *   GET /v1/surah                     → list of all 114 surahs
  *   GET /v1/surah/{n}                 → Arabic text of surah n
- *   GET /v1/surah/{n}/ar.alafasy      → per-ayah audio by Mishary Alafasy
  */
 
 const API_BASE = "https://api.alquran.cloud/v1";
 
-/** Recitation edition. The audio endpoint returns one mp3 per ayah. */
-export const RECITER = "ar.alafasy";
-export const RECITER_NAME = "Mishary Rashid Alafasy";
+export const RECITERS = [
+  {
+    value: "https://server11.mp3quran.net/alzain",
+    label: "الشيخ الزين محمد أحمد",
+    englishName: "Al-Zain Mohamed Ahmed",
+  },
+  {
+    value: "https://server11.mp3quran.net/sds",
+    label: "الشيخ عبد الرحمن السديس",
+    englishName: "Abdul Rahman Al-Sudais",
+  },
+  {
+    value: "https://server8.mp3quran.net/afs",
+    label: "الشيخ مشاري العفاسي",
+    englishName: "Mishary Rashid Alafasy",
+  },
+  {
+    value: "https://download.quranicaudio.com/quran/ali_jaber",
+    label: "الشيخ علي جابر",
+    englishName: "Ali Jaber",
+  },
+] as const;
+
+export type ReciterBaseUrl = (typeof RECITERS)[number]["value"];
+
+export function isReciter(value: string): value is ReciterBaseUrl {
+  return RECITERS.some((reciter) => reciter.value === value);
+}
+
+/** Both providers use three-digit filenames for complete Surah recordings. */
+export function getSurahAudioUrl(
+  reciter: ReciterBaseUrl,
+  surahNumber: number
+) {
+  const paddedSurah = String(surahNumber).padStart(3, "0");
+
+  return `${reciter}/${paddedSurah}.mp3`;
+}
 
 export type SurahMeta = {
   number: number;
@@ -31,13 +65,7 @@ export type Ayah = {
   sajda: boolean | { id: number; recommended: boolean; obligatory: boolean };
 };
 
-export type AudioAyah = Ayah & {
-  audio: string;
-  audioSecondary?: string[];
-};
-
 export type SurahDetail = SurahMeta & { ayahs: Ayah[] };
-export type SurahAudio = SurahMeta & { ayahs: AudioAyah[] };
 
 type Envelope<T> = { code: number; status: string; data: T };
 
@@ -66,26 +94,14 @@ export function getSurahText(number: number) {
   return request<SurahDetail>(`/surah/${number}`, 86_400);
 }
 
-export function getSurahAudio(number: number) {
-  return request<SurahAudio>(`/surah/${number}/${RECITER}`, 86_400);
-}
-
-/**
- * Text and audio in one round trip. The two editions are fetched in
- * parallel and zipped by ayah index so the reader can highlight the verse
- * that is currently being recited.
- */
+/** Load and prepare the Arabic text independently of audio availability. */
 export async function getSurah(number: number) {
-  const [text, audio] = await Promise.all([
-    getSurahText(number),
-    getSurahAudio(number),
-  ]);
+  const text = await getSurahText(number);
 
-  const ayahs = text.ayahs.map((ayah, i) => ({
+  const ayahs = text.ayahs.map((ayah) => ({
     number: ayah.number,
     numberInSurah: ayah.numberInSurah,
     text: cleanAyahText(ayah.text),
-    audio: audio.ayahs[i]?.audio ?? "",
     sajda: Boolean(ayah.sajda),
     page: ayah.page,
     juz: ayah.juz,

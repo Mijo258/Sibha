@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Amiri, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { GeometricBackground } from "@/components/geometric-background";
+import { NavigationMenu } from "@/components/NavigationMenu";
+import {
+  PageTransitionContent,
+  PageTransitionProvider,
+} from "@/components/page-transitions";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { ThemeScript } from "@/components/theme-script";
 
 const geistSans = Geist({
@@ -27,7 +35,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Noor — Tasbeeh & Qur'an",
+  title: "Maha — Tasbeeh & Qur'an",
   description:
     "A digital tasbeeh counter and Qur'an reader with recitation by Mishary Alafasy.",
 };
@@ -42,7 +50,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <PageTransitionProvider>
+          <GeometricBackground />
+          <SiteHeader />
+          <NavigationMenu />
+          <PageTransitionContent>{children}</PageTransitionContent>
+          <SiteFooter />
+        </PageTransitionProvider>
+      </body>
     </html>
   );
 }

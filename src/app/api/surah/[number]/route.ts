@@ -5,9 +5,9 @@ import { getSurah } from "@/lib/quran";
 /**
  * GET /api/surah/[number]
  *
- * Proxies AlQuran.cloud so the browser makes one request instead of two, and
- * so the text/audio zip and basmala handling live in a single place. The
- * Qur'an does not change, so responses are cached for a day.
+ * Returns the Arabic text with the existing basmala handling. Audio plays
+ * directly from MP3Quran or QuranicAudio and is independent of this route.
+ * Text responses are cached for a day.
  */
 export const revalidate = 86_400;
 
