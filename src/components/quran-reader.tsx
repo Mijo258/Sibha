@@ -275,6 +275,7 @@ export function QuranReader({
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const [audioReloadKey, setAudioReloadKey] = useState(0);
+  const [usingFallback, setUsingFallback] = useState(false);
   const [audioState, setAudioState] = useState<LoadState>("loading");
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -289,7 +290,12 @@ export function QuranReader({
   const selectedReciter =
     RECITERS.find((option) => option.value === reciter) ?? RECITERS[0];
   const ayahCount = displayedSurah?.numberOfAyahs ?? ayahs.length;
-  const audioSrc = getSurahAudioUrl(selectedReciter.value, selected);
+  const fallbackBaseUrl =
+    "fallback" in selectedReciter ? selectedReciter.fallback : undefined;
+  const audioSrc = getSurahAudioUrl(
+    usingFallback && fallbackBaseUrl ? fallbackBaseUrl : selectedReciter.value,
+    selected
+  );
   // Recalculate whether metadata or text arrives first, and for each reciter.
   const ayahTimeWindows = useMemo(
     () => estimateAyahTimeWindows(surah?.ayahs ?? [], duration),
@@ -316,6 +322,9 @@ export function QuranReader({
       ) {
         return;
       }
+
+      // Let onError handle media failures and attempt the fallback source.
+      if (element.error) return;
 
       resumePlayback.current = false;
       setPlaying(false);
@@ -357,7 +366,7 @@ export function QuranReader({
     return () => controller.abort();
   }, [selected, textReloadKey]);
 
-  /* Reload only when the Surah or reciter changes, or audio is retried. */
+  /* Reload for the selected recording, a fallback source, or an audio retry. */
   useEffect(() => {
     const element = audioRef.current;
     if (!element) return;
@@ -408,6 +417,7 @@ export function QuranReader({
     if (next === selected) return;
 
     resetPlayback();
+    setUsingFallback(false);
     setSelected(next);
     setSurah(null);
     setState("loading");
@@ -417,6 +427,7 @@ export function QuranReader({
     if (!next || next === reciter || !isReciter(next)) return;
 
     resetPlayback(playing || resumePlayback.current);
+    setUsingFallback(false);
     setReciter(next);
   }
 
@@ -428,6 +439,7 @@ export function QuranReader({
 
   function retryAudio() {
     resetPlayback(true);
+    setUsingFallback(false);
     setAudioReloadKey((key) => key + 1);
   }
 
@@ -683,6 +695,12 @@ export function QuranReader({
                 !isCurrentAudio(event.currentTarget) ||
                 !event.currentTarget.error
               ) {
+                return;
+              }
+
+              if (!usingFallback && fallbackBaseUrl) {
+                resetPlayback(playing || resumePlayback.current);
+                setUsingFallback(true);
                 return;
               }
 

@@ -29,6 +29,18 @@ export const RECITERS = [
     label: "الشيخ علي جابر",
     englishName: "Ali Jaber",
   },
+  {
+    value: "https://server6.mp3quran.net/abkr",
+    fallback: "https://download.quranicaudio.com/quran/idrees_abkar",
+    label: "الشيخ إدريس أبكر",
+    englishName: "Idris Abkar",
+  },
+  {
+    value: "https://server11.mp3quran.net/yasser",
+    fallback: "https://download.quranicaudio.com/quran/yasser_ad-dussary",
+    label: "الشيخ ياسر الدوسري",
+    englishName: "Yasser Al-Dosari",
+  },
 ] as const;
 
 export type ReciterBaseUrl = (typeof RECITERS)[number]["value"];
@@ -39,7 +51,7 @@ export function isReciter(value: string): value is ReciterBaseUrl {
 
 /** Both providers use three-digit filenames for complete Surah recordings. */
 export function getSurahAudioUrl(
-  reciter: ReciterBaseUrl,
+  reciter: string,
   surahNumber: number
 ) {
   const paddedSurah = String(surahNumber).padStart(3, "0");
